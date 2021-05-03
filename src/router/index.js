@@ -59,43 +59,42 @@ const routes = [
     name: "listUsers",
     component: () => import("@/views/users/ListUsers.vue"),
   },
+  // /*++++++++++++++++ TODO quando back-end +++++++++++++++++++++++++++++++++ */
   // novos tarefa 3.2
   {
-    path: "/admin/users",
+    path: "/admin/experts",
     name: "listExperts",
     component: () => import("@/views/experts/ListExperts.vue"),
   },
   {
-    path: "/admin/users",
+    path: "/admin/sponsors",
     name: "listSponsors",
     component: () => import("@/views/sponsors/ListSponsors.vue"),
   },
   {
-    path: "/admin/users/add",
+    path: "/admin/experts/add",
     name: "addExpert",
     component: () => import("@/views/experts/AddExpert.vue"),
   },
   {
-  path: "/admin/users/add",
-  name: "addSponsor",
-  component: () => import("@/views/sponsors/AddSponsor.vue"),
-},
+    path: "/admin/sponsors/add",
+    name: "addSponsor",
+    component: () => import("@/views/sponsors/AddSponsor.vue"),
+  },
+  
+  {
+    path: "/admin/sponsors/:sponsorId",
+    name: "editSponsor",
+    component: () => import("@/views/sponsors/EditSponsor.vue"),
+  },
 
-/*++++++++++++++++ TODO quando back-end +++++++++++++++++++++++++++++++++ */
+  {
+    path: "/admin/experts/:expertId",
+    name: "editExpert",
+    component: () => import("@/views/experts/EditExpert.vue"),
+  },
 
-{
-  path: "/admin/sponsors/:sponsorId",
-  name: "editUser",
-  component: () => import("@/views/sponsors/EditSponsor.vue"),
-},
-
-{
-  path: "/admin/experts/:expertId",
-  name: "editUser",
-  component: () => import("@/views/experts/EditExpert.vue"),
-},
-
-// end
+  // end
   {
     path: "/admin/users/add",
     name: "addUser",
@@ -126,15 +125,15 @@ const routes = [
     name: "profile",
     component: () => import("@/views/Profile.vue"),
     meta: {
-      rule: "user"
-    }
+      rule: "user",
+    },
   },
   {
     path: "/profile/edit",
     name: "editProfile",
     component: () => import("@/views/EditProfile.vue"),
     meta: {
-      rule: "user"
+      rule: "user",
     }
   },
   {
@@ -142,16 +141,16 @@ const routes = [
     name: "ranking",
     component: () => import("@/views/Ranking.vue"),
     meta: {
-      rule: "user"
+      rule: "user",
     }
   },
-  
+
   {
     path: "/quizzes",
     name: "quizzes",
     component: () => import("@/views/Quizzes.vue"),
     meta: {
-      rule: "user"
+      rule: "user",
     }
   },
   {
@@ -159,7 +158,7 @@ const routes = [
     name: "quiz",
     component: () => import("@/views/Quiz.vue"),
     meta: {
-      rule: "user"
+      rule: "user",
     }
   },
   {
@@ -167,7 +166,7 @@ const routes = [
     name: "animals",
     component: () => import("@/views/Animals.vue"),
     meta: {
-      rule: "user"
+      rule: "user",
     }
   },
   {
@@ -175,7 +174,7 @@ const routes = [
     name: "animal",
     component: () => import("@/views/Animal.vue"),
     meta: {
-      rule: "user"
+      rule: "user",
     }
   },
   // Redirect to 404 page, if no match found
