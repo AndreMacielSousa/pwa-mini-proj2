@@ -2,7 +2,7 @@
   
   <section class="page-section">
     <b-container>
-      <HeaderPage title="Adicionar Expert"/>
+      <HeaderPage title="Adicionar Sponsor"/>
      
       <!--FORM-->
       <b-row>
@@ -21,7 +21,7 @@
             </div>
             <div class="form-group">
               <select id="sltType" class="form-control form-control-lg" v-model="type" required>
-                <option value>-- SELECIONA GRUPO --</option>
+                <option value>-- SELECIONA ANIMAL --</option>
                 <option value="admin">XXXXXX</option>
                 <option value="user">YYYYYYYY</option>
               </select>
@@ -64,7 +64,7 @@
               <i class="fas fa-plus-square"></i> ADICIONAR
             </button>
             <router-link
-              :to="{name: 'listExperts'}"
+              :to="{name: 'listSponsors'}"
               tag="button"
               class="btn btn-outline-danger btn-lg"
             >
@@ -79,6 +79,7 @@
 </template>
 
 <script>
+/*++++++++++++++++ TODO quando back-end +++++++++++++++++++++++++++++++++ */
 import { ADD_USER } from "@/store/users/user.constants";
 import HeaderPage from "@/components/HeaderPage.vue"
 import router from "@/router";

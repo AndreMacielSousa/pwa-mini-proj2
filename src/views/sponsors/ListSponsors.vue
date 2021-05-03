@@ -71,6 +71,7 @@
 </template>
 
 <script>
+/*++++++++++++++++ TODO quando back-end +++++++++++++++++++++++++++++++++ */
 import { FETCH_USERS, REMOVE_USER } from "@/store/users/user.constants";
 import HeaderPage from "@/components/HeaderPage.vue"
 import { mapGetters } from "vuex";
