@@ -5,12 +5,12 @@ import {
   FETCH_USERS,
   ADD_USER,
   EDIT_USER,
-  REMOVE_USER
+  REMOVE_USER,
 } from "./user.constants";
 
 const state = {
   users: [],
-  message: ""
+  message: "",
 };
 
 const getters = {
@@ -73,7 +73,7 @@ const actions = {
         err => reject(err)
       );
     });
-  }
+  },
 };
 
 export const mutations = {
@@ -82,7 +82,7 @@ export const mutations = {
   },
   [SET_MESSAGE]: (state, message) => {
     state.message = message;
-  }
+  },
 };
 
 export default {
@@ -90,5 +90,5 @@ export default {
   state,
   getters,
   actions,
-  mutations
+  mutations,
 };
